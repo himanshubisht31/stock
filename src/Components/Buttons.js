@@ -3,7 +3,8 @@ import "./Buttons.css";
 import { wishListContext } from "../Context/WishListContext";
 
 export default function Buttons({ found, stock }) {
-  const { wish, handleWishListChange } = useContext(wishListContext);
+  const { wish, handleWishListChange, handleDelete } =
+    useContext(wishListContext);
 
   return (
     <div className="buttonContainer">
@@ -19,7 +20,11 @@ export default function Buttons({ found, stock }) {
       </button>
       <button>
         {found ? (
-          <img src="/images/delete.png" alt="" />
+          <img
+            src="/images/delete.png"
+            alt=""
+            onClick={() => handleDelete(stock)}
+          />
         ) : (
           <img
             src="/images/add.png"

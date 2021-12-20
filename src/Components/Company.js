@@ -5,19 +5,17 @@ import { wishListContext } from "../Context/WishListContext";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Company() {
-  // const [wish, setWish] = useState([
-  //   ["MAFSETF::NSE", 17.53, 17.63],
-  //   ["SBIETFCON::NSE", 70.74, 70.58],
-  // ]);
-  const { wish, handleWishListChange } = useContext(wishListContext);
+  const { wish, handleWishListChange, handleDelete } =
+    useContext(wishListContext);
 
   return (
     <>
-      {wish.map((ele) => (
+      {wish.map((stock) => (
         <CompanyList
-          company={ele[0].split("::")[0]}
-          pre={+ele[1]}
-          current={+ele[2]}
+          // company={ele[0].split("::")[0]}
+          // pre={+ele[1]}
+          // current={+ele[2]}
+          stock={stock}
           key={uuidv4()}
         />
       ))}

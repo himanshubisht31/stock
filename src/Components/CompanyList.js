@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Buttons from "./Buttons";
 import "./Company.css";
 
-export default function CompanyList({ company,pre,current }) {
+export default function CompanyList({ stock}) {
+  // const { company, pre, +stock[2] }={stock:{stock[0].split("::")[0],+stock[1],+stock[2]}}
   const [showButtons, setShowButtons] = useState(false);
-  const diff = current - pre
-  const percent=parseFloat(diff*100/pre).toFixed(2)
+  const diff = +stock[2] - +stock[1]
+  const percent=parseFloat(diff*100/+stock[1]).toFixed(2)
   return (
     <div
       className="companyContainer"
@@ -18,13 +19,13 @@ export default function CompanyList({ company,pre,current }) {
     >
       <div>
         <div className={diff >= 0 ? "increaseStock" : "decreaseStock"}>
-          {company}
+          {stock[0].split("::")[0]}
         </div>
         <div>NSE</div>
       </div>
       <div>
         <div className={diff >= 0 ? "increaseStock" : "decreaseStock"}>
-          {current}
+          {+stock[2]}
         </div>
         <div className="percentage">
           {diff >= 0 ? (
@@ -35,7 +36,7 @@ export default function CompanyList({ company,pre,current }) {
           <span>{`${percent}%`}</span>
         </div>
       </div>
-      {showButtons && <Buttons found={true} />}
+      {showButtons && <Buttons found={true} stock={stock} />}
     </div>
   );
 }
