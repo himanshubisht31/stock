@@ -8,8 +8,9 @@ function WishListProvider({ children }) {
     ["SBIETFCON::NSE", 70.74, 70.58],
   ]);
 
-  const handleWishListChange = () => {
-    setWish(wish);
+  const handleWishListChange = (arg) => {
+    setWish([...wish, arg]);
+    console.log([...wish, arg]);
   };
   return (
     <wishListContext.Provider value={{ wish, handleWishListChange }}>

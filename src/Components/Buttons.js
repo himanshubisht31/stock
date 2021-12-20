@@ -2,14 +2,8 @@ import React, { useContext } from "react";
 import "./Buttons.css";
 import { wishListContext } from "../Context/WishListContext";
 
-
-export default function Buttons({ found,stock }) {
-    const { wish, setWish } = useContext(wishListContext);
-
-
-   const handleClick = () => {
-    setWish(wish => [...wish, stock])
-  };
+export default function Buttons({ found, stock }) {
+  const { wish, handleWishListChange } = useContext(wishListContext);
 
   return (
     <div className="buttonContainer">
@@ -27,7 +21,11 @@ export default function Buttons({ found,stock }) {
         {found ? (
           <img src="/images/delete.png" alt="" />
         ) : (
-          <img src="/images/add.png" alt="" onClick={ handleClick} />
+          <img
+            src="/images/add.png"
+            alt=""
+            onClick={() => handleWishListChange(stock)}
+          />
         )}
       </button>
       <button>

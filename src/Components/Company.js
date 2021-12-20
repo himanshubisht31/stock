@@ -9,7 +9,7 @@ export default function Company() {
   //   ["MAFSETF::NSE", 17.53, 17.63],
   //   ["SBIETFCON::NSE", 70.74, 70.58],
   // ]);
-  const { wish, setWish } = useContext(wishListContext);
+  const { wish, handleWishListChange } = useContext(wishListContext);
 
   return (
     <>
