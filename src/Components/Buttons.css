@@ -1,0 +1,23 @@
+.buttonContainer {
+  /* border: 1px solid red; */
+  width: fit-content;
+  position: absolute;
+  right: 6rem;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.buttonContainer button {
+  background: transparent;
+  border: none;
+}
+
+.buttonContainer > div {
+  display: flex;
+  z-index: 10;
+}
+
+.buttonContainer img{
+  width: 48px;
+}

@@ -1,0 +1,26 @@
+.companyContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 15vh;
+  padding: 1rem;
+  margin-bottom: 2vh;
+  position: relative;
+}
+
+.percentage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.increaseStock{
+    color: #47d282;
+    font-size:1.7rem ;
+    font-weight: 550;
+}
+.decreaseStock{
+    font-weight: 550;
+    font-size:1.7rem ;
+    color: #e74c3c;
+}

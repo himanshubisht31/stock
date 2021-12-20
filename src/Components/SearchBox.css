@@ -1,0 +1,27 @@
+.search {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: 3rem;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.search:focus {
+  outline: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.resultContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 10vh;
+  padding: 1rem;
+  background: white;
+  position: relative;
+}
