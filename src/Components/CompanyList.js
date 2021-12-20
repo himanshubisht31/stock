@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Buttons from "./Buttons";
-import "./Company.css";
+import "../Styles/Company.css";
 
 export default function CompanyList({ stock}) {
   const [showButtons, setShowButtons] = useState(false);

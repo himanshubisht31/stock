@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./Buttons.css";
+import "../Styles/Buttons.css";
 import { wishListContext } from "../Context/WishListContext";
 
 export default function Buttons({ found, stock }) {
