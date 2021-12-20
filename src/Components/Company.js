@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./Company.css";
 import CompanyList from "./CompanyList";
 import { wishListContext } from "../Context/WishListContext";
@@ -11,13 +11,7 @@ export default function Company() {
   return (
     <>
       {wish.map((stock) => (
-        <CompanyList
-          // company={ele[0].split("::")[0]}
-          // pre={+ele[1]}
-          // current={+ele[2]}
-          stock={stock}
-          key={uuidv4()}
-        />
+        <CompanyList stock={stock} key={uuidv4()} />
       ))}
     </>
   );

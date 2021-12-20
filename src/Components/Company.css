@@ -24,3 +24,9 @@
     font-size:1.7rem ;
     color: #e74c3c;
 }
+
+
+.companyContainer:hover {
+ background: #FFF3E4;
+ transform: scale(1.01);
+}

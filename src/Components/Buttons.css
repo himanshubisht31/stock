@@ -11,6 +11,7 @@
 .buttonContainer button {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .buttonContainer > div {
@@ -20,4 +21,14 @@
 
 .buttonContainer img{
   width: 48px;
+}
+
+.buttonContainer button:hover {
+ background: #EED6C4;
+ transform: scale(1.2);
+}
+.buttonContainer button:active {
+  background-color: #6B4F4F;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

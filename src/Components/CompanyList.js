@@ -3,7 +3,6 @@ import Buttons from "./Buttons";
 import "./Company.css";
 
 export default function CompanyList({ stock}) {
-  // const { company, pre, +stock[2] }={stock:{stock[0].split("::")[0],+stock[1],+stock[2]}}
   const [showButtons, setShowButtons] = useState(false);
   const diff = +stock[2] - +stock[1]
   const percent=parseFloat(diff*100/+stock[1]).toFixed(2)
